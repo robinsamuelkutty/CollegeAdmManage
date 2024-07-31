@@ -20,6 +20,32 @@ router.post('/teachers', async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 });
+router.put('/teachers/:id', async (req, res) => {
+  try {
+    const teacherId = req.params.id;
+    const updatedTeacher = await Teacher.findByIdAndUpdate(teacherId, req.body, { new: true });
+    if (!updatedTeacher) {
+      return res.status(404).json({ message: 'Teacher not found' });
+    }
+    res.json(updatedTeacher);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
+// Delete a teacher
+router.delete('/teachers/:id', async (req, res) => {
+  try {
+    const teacherId = req.params.id;
+    const deletedTeacher = await Teacher.findByIdAndDelete(teacherId);
+    if (!deletedTeacher) {
+      return res.status(404).json({ message: 'Teacher not found' });
+    }
+    res.json({ message: 'Teacher deleted successfully' });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
 
 // Get all teachers
 router.get('/teachers', async (req, res) => {
@@ -87,5 +113,31 @@ router.get('/subjects', async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 });
+// Teacher login
+router.post('/teachers/login', async (req, res) => {
+  const { userId, password } = req.body;
 
+  try {
+    const teacher = await Teacher.findOne({ userId });
+    if (!teacher || teacher.password !== password) {
+      return res.status(401).json({ message: 'Invalid credentials' });
+    }
+
+    // Send back the teacher data or a token
+    res.status(200).json({ message: 'Login successful', teacher });
+  } catch (err) {
+    console.error('Error during teacher login:', err);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+router.get('/teachers/:id/subjects', async (req, res) => {
+  try {
+    const teacherId = req.params.id;
+    const subjects = await Subject.find({ teacherId }).populate('classId');
+    res.json(subjects);
+  } catch (err) {
+    console.error('Error fetching subjects for teacher:', err);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
 module.exports = router;

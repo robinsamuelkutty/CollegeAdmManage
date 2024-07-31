@@ -88,6 +88,16 @@ router.delete('/departments/:id', async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 });
+// Get all unique courses
+router.get('/courses', async (req, res) => {
+  try {
+    const courses = await Subject.distinct('course');
+    res.json(courses);
+  } catch (err) {
+    console.error('Error fetching courses:', err);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
 
 module.exports = router;
 

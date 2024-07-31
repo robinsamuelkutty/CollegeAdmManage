@@ -9,6 +9,9 @@ const studentRoutes = require('./routes/studentRoute');
 const departmentRoutes = require('./routes/departmentRoute')
 const classRoutes = require('./routes/classRoute')
 const teacherRoutes = require('./routes/teacherRoute')
+const attendanceRouter =require('./routes/attendanceRoute')
+const markRouter = require("./routes/markRoute")
+const adminRouter = require("./routes/adminRoute")
 const app = express();
 
 // Database connection
@@ -44,6 +47,9 @@ app.use('/api', studentRoutes);
 app.use('/api',departmentRoutes);
 app.use('/api',classRoutes);
 app.use('/api',teacherRoutes);
+app.use('/api',attendanceRouter);
+app.use('/api',markRouter);
+app.use('/api',adminRouter)
 
 // Catch 404 and forward to error handler
 app.use((req, res, next) => {
