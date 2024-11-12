@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
+
+.admin-login-container {
+    font-family: 'PT Sans', sans-serif;
+   background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.admin-login-box {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 400px;
+  
+}
+
+.admin-login-box h2 {
+  margin-bottom: 20px;
+  color: #0C2D57;
+  font-weight: 700;
+  font-size: 30px;
+  
+}
+
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+  
+}
+
+.input-group label {
+ 
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: 600;
+}
+
+.input-icon {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-left: 10px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+  width: 270px;
+}
+.erroradmin-message{
+    color: red;
+}
+.input-icon svg {
+ 
+  color: #333;
+}
+
+.input-icon input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 16px;
+  
+}
+
+.input-icon input.small-input {
+  width: 70%;
+}
+
+.input-icon:focus-within {
+  border-color: #0C2D57;
+  box-shadow: 0 0 5px rgba(12, 45, 87, 0.5);
+}
+
+.adminLogin-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #0C2D57;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.adminLogin-btn:hover {
+  background-color: #0A1F3A;
+}
+
+.adminLogin-btn:active {
+  background-color: #08182A;
+}

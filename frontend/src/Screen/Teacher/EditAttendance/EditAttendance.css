@@ -1,0 +1,79 @@
+.editAttendance{
+    padding: 2rem;
+    font-family: 'PT Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: aliceblue;
+}
+.showHours button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0C2D57;
+  cursor: pointer;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  padding: 10px;
+  flex: 1;
+}
+
+.showHours button.selected {
+  border-radius: 10px;
+  color: #FF033E;
+  border-bottom: 2px solid #FF033E;
+}
+
+.showHours button:hover {
+  color: #FF033E;
+}
+
+.attendance-table button {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.attendance-table button.present {
+  background-color: #28a745;
+  color: white;
+}
+
+.attendance-table button.absent {
+  background-color: #dc3545;
+  color: white;
+}
+
+.attendance-table button:hover {
+  background-color: #ddd;
+}
+
+.attendance-table button.present:hover {
+  background-color: #218838;
+}
+
+.attendance-table button.absent:hover {
+  background-color: #c82333;
+}
+
+@keyframes tableSlideIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.attendance-table {
+  margin-top: 20px;
+  border-collapse: collapse;
+  animation: tableSlideIn 0.5s ease forwards;
+}

@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+
+.pagebody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    padding: 20px;
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+    background-color: aliceblue;
+    height: 600px;
+    padding-top: 50px;
+    
+}
+
+
+
+.upper, .lower {
+    
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.cards {
+    background-color:#0C2D57;
+    border-radius: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    color: white;
+    font-size: xx-large;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    height: 200px;
+    align-content: center;
+}
+
+
+.cards h4, .cards h5, .cards h2 {
+    margin: 10px 0;
+}
+
+.cards:hover {
+    transform: scale(1.05);
+    color: darkslateblue;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .pagebody{
+        height: 160vh;
+    }
+    .upper, .lower {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards {
+        width: 250px;
+        
+    }
+
+    .btn {
+        width: 80%;
+        padding: 0.75rem; /* Adjust padding for smaller buttons */
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .btn {
+        width: 100%;
+        padding: 0.5rem; /* Adjust padding for very small buttons */
+        font-size: 0.875rem;
+    }
+}

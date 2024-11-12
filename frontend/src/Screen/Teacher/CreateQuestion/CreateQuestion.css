@@ -1,0 +1,179 @@
+.createQues{
+    padding: 2rem;
+    font-family: 'PT Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: aliceblue; 
+}
+
+
+.quespaper {
+    width: 100%;
+    max-width: 800px;
+    
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.headerSection {
+    width: 100%;
+    
+}
+
+.headerTop {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    
+}
+
+.registerInfo span {
+   
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.headerMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-collapse: collapse;
+    text-align: center;
+    border: 1px solid #000;
+}
+
+.logoSection img {
+    height: 100px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.collegeInfo h1 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.headerDetails {
+    width: 100%;
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+
+.detailsRow {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: bold;
+    flex-wrap: wrap;
+    
+
+    
+}
+
+.detailsRow span {
+    flex: 1;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 4px;
+    border: 1px solid #000;
+    border-collapse: collapse;
+    
+}
+.detailsRow span input,select{
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+}
+.commonAlso span{
+    font-size: 14px;
+    font-weight: bold;
+    
+}
+.hide-borders input,.hide-borders select {
+    border: none;
+    outline: none;
+}
+.paperMainPart h3{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+/* Popup Background */
+.popUp {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+/* Popup Content Box */
+.popupContent {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    max-width: 100%;
+    text-align: center;
+}
+
+/* Popup Title */
+.popupContent h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Popup Input Fields */
+.popupContent textarea,.popupContent input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* Popup Buttons */
+.popupContent button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #0C2D57;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.popupContent button:hover {
+    background-color: #082040; /* Darker shade for hover effect */
+}
+
+/* Cancel Button Specific Styling */
+.popupContent button:last-of-type {
+    background-color:crimson;
+    color: white;
+    margin-left: 10px;
+}
+
+.popupContent button:last-of-type:hover {
+    background-color: red;
+}
+.operatePart button:hover{
+    opacity: 0.7;
+}

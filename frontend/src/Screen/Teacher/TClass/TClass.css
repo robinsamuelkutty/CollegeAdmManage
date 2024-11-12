@@ -1,0 +1,264 @@
+
+.TClass {
+   padding-bottom: 1rem;
+    font-family: 'PT Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: aliceblue;
+    overflow-x: hidden;       
+}
+
+.TClass h2 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.TClass h5 {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 20px;
+}
+.TClass h7{
+    margin-top: 100px;
+    font-size: 30px;
+    color: #333;
+    font-weight: 800;
+}
+
+.tercards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 15px;
+    width: 900px;
+    float:left;
+    
+    margin-top: 20px;
+    
+}
+/* TClass.css */
+
+/* Style the select container */
+.TClass select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-family: 'PT Sans', sans-serif;
+    color: #0C2D57;
+    background-color: #f0f4f7;
+    border: 2px solid #0C2D57;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Style the select option */
+  .TClass select {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+    color: #333;
+    padding: 10px;
+    background-color: #fff;
+  }
+  
+  .TClass select:hover {
+    border-color: #00509e;
+  }
+  
+  /* Focus effect */
+  .TClass select:focus {
+    border-color: #00509e;
+    box-shadow: 0 0 5px rgba(0, 80, 158, 0.3);
+  }
+    /* Style the select option */
+    .zxc select {
+        font-family: 'PT Sans', sans-serif;
+        font-size: 14px;
+        color: #333;
+        padding: 5px;
+        background-color: #fff;
+      }
+      
+      .zxc select:hover {
+        border-color: #00509e;
+      }
+      
+      /* Focus effect */
+      .zxc select:focus {
+        border-color: #00509e;
+        box-shadow: 0 0 5px rgba(0, 80, 158, 0.3);
+      }
+.cardt {
+   
+    background-color: #0C2D57;
+    flex-direction: column;
+    border-radius: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'PT Sans', sans-serif;
+    padding: 10px;
+    margin: 10px;
+    height: 230px;
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    
+    
+}
+.cardt h3{
+    font-size: 25px;
+    color:white;
+}
+.att-mark {
+    filter: invert(96%) sepia(90%) saturate(1411%) hue-rotate(178deg) brightness(108%) contrast(106%);
+    transition: transform 0.3s ease;
+   
+   
+}
+.vcardt {
+    background-color: deepskyblue;
+    flex-direction: column;
+    border-radius: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'PT Sans', sans-serif;
+    padding: 10px;
+    margin: 10px;
+    height: 130px;
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 25px;
+    color: aliceblue;
+}
+ .vcardt:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    color: aqua;
+}
+.cardt:hover{
+    transform: scale(1.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    h3{
+    color: lightblue;
+    }
+    img{
+        filter: invert(78%) sepia(33%) saturate(931%) hue-rotate(174deg) brightness(100%) contrast(97%);
+    }
+}
+
+.att-mark {
+    width: 150px;
+    height: 150px;
+    
+    float: left;
+}
+/* Extra small devices (phones, 480px and down) */
+@media (max-width: 480px) {
+    .TClass{
+       
+       
+        text-align: center;
+    }
+    .tercards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cardt, .vcardt {
+        
+        max-width: 300px;
+        padding: 20px;
+    }
+
+    .att-mark {
+        width: 140px;
+        height: 140px;
+    }
+
+    .cardt h3, .vcardt {
+        font-size: 20px;
+    }
+    .back-btn{
+       margin-left: 20px;
+
+    }
+}
+
+/* Small devices (phones in landscape and tablets, 481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .tercards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cardt, .vcardt {
+       
+        padding: 20px;
+    }
+
+    .att-mark {
+        width: 140px;
+        height: 140px;
+    }
+
+    .cardt h3, .vcardt {
+        font-size: 22px;
+    }
+}
+
+/* Medium devices (tablets in portrait mode, 769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .tercards {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .cardt, .vcardt {
+       
+        padding: 15px;
+    }
+
+    .att-mark {
+        width: 140px;
+        height: 140px;
+    }
+
+    .cardt h3, .vcardt {
+        font-size: 24px;
+    }
+}
+
+/* Large devices (desktops, 1025px to 1280px) */
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .tercards {
+        justify-content: space-between;
+    }
+
+    .cardt, .vcardt {
+        max-width: 40%;
+    }
+}
+
+/* Extra large devices (large desktops, 1281px and up) */
+@media (min-width: 1281px) {
+    .tercards {
+        justify-content: space-around;
+    }
+
+    .cardt, .vcardt {
+        max-width: 350px;
+    }
+}

@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.main-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    background-color: aliceblue;
+    margin: 0;
+    height: 90vh;
+    font-family: "PT Sans", sans-serif;
+    
+}
+
+.main-body h2 {
+    margin-top: 20px;
+    text-align: center;
+    
+}
+
+.toplevel, .downlevel {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.toplevel div, .downlevel div {
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    margin: 20px;
+    transition: transform 0.3s ease-in-out;
+    font-size: x-large;
+    font-weight: 700;
+}
+
+.toplevel div img, .downlevel div img {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 2px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.toplevel div:hover img, .downlevel div:hover img {
+    transform: scale(1.1);
+    color: #0C2D57;
+}
+
+.toplevel div:hover, .downlevel div:hover {
+    transform: scale(1.1);
+    color: #0C2D57;
+    filter: invert(14%) sepia(84%) saturate(919%) hue-rotate(180deg) brightness(95%) contrast(97%);
+}
+
+@media (max-width: 1024px) {
+    .main-body {
+        height: 140vh;
+        padding: 20px 10px;
+    }
+
+    .toplevel, .downlevel {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .toplevel div img, .downlevel div img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-body{
+        height: 110vh;
+    }
+    .toplevel, .downlevel {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0 ;
+    }
+
+    .toplevel div, .downlevel div {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .toplevel div img, .downlevel div img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-body{
+        height: 104vh;
+    }
+    .toplevel, .downlevel {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+        margin-top: 0;
+    }
+
+    .toplevel div img, .downlevel div img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+

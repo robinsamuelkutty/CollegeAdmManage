@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.selectSeries {
+  background-color: aliceblue;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+  font-family: 'PT Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+.selectSeries h5 {
+  
+  font-size: 30px;
+}
+
+.selectTest {
+
+  width: 1100px;
+  margin-left: 50px;
+}
+
+.scardt {
+  background-color: #0C2D57;
+  border-radius: 45px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin: 20px;
+  height: 230px;
+  width: 100%;
+  max-width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out;
+  float: left;
+  margin-left: 60px;
+  flex-direction: column;
+  color: white;
+  
+}
+.scardt h3{
+  
+  font-size: 30px;
+}
+.scardt strong{
+  font-size: 50px;
+}
+
+.scardt:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  color: lightblue;
+}
+
+/* Extra small devices (phones, 480px and down) */
+@media (max-width: 480px) {
+  .selectSeries h5 {
+    margin-top: 60px;
+    text-align: center;
+  }
+
+  .selectTest {
+   width: 400px;
+    margin-left: 130px;
+    margin-top: 20px;
+  }
+
+  .scardt {
+    margin: 10px;
+  
+   
+    font-size: 16px;
+  }
+}
+
+/* Small devices (phones in landscape and tablets, 481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .selectSeries h5 {
+    margin-top: 80px;
+    text-align: center;
+  }
+
+  .selectTest {
+    margin-left: 230px;
+    width: 500px;
+    margin-top: 30px;
+  }
+
+  .scardt {
+    margin: 15px;
+    
+    
+    margin-left: 0;
+    font-size: 18px;
+  }
+}
+
+/* Medium devices (tablets in portrait mode, 769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .selectSeries h5 {
+    margin-top: 100px;
+  }
+
+  .selectTest {
+    width: 100%;
+    margin-top: 40px;
+    margin-left: 200px;
+  }
+
+  .scardt {
+    margin: 15px;
+    
+    max-width: 250px;
+    margin-left: 15px;
+    font-size: 18px;
+  }
+}
+
+/* Large devices (desktops, 1025px to 1280px) */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .selectSeries h5 {
+    margin-top: 120px;
+  }
+
+  .selectTest {
+    width: 100%;
+  }
+
+  .scardt {
+    margin: 20px;
+    width: 100%;
+    max-width: 250px;
+    margin-left: 30px;
+    font-size: 20px;
+  }
+}
+
+/* Extra large devices (large desktops, 1281px and up) */
+@media (min-width: 1281px) {
+  
+  .selectSeries h5 {
+    margin-top: 120px;
+  }
+
+  .selectTest {
+    width: 100%;
+    margin-left: 150px;
+    
+  }
+  
+
+  .scardt {
+    margin: 20px;
+    width: 100%;
+    max-width: 250px;
+    margin-left: 60px;
+    font-size: 20px;
+  }
+}

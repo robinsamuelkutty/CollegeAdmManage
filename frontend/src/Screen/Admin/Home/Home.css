@@ -1,0 +1,179 @@
+.Home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    height: 600px;
+    padding: 2rem;
+    background-color: aliceblue;
+  
+}
+
+.Numbers-count{
+    
+    background-color: #0C2D57;
+    color: white;
+    height: 250px;  
+    width: 100%;
+    max-width: 450px;
+    border-radius: 25px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 1rem 0;
+    margin-left: 30px;
+}
+.btn {
+    
+  
+    background-color: #0AA8F1;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 1.75rem .5rem;
+    font-size: 20px;
+    margin: 1rem 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-left: 20px;
+}
+
+.btn img {
+    width: 45px;
+    height: 45px;
+   
+}
+
+.btn:hover {
+    background-color: deepskyblue;
+}
+
+
+
+.stdlogo {
+    filter: invert(96%) sepia(5%) saturate(2750%) hue-rotate(183deg) brightness(104%) contrast(104%);
+}
+.Numbers-count h2{
+    font-size: x-large;
+    margin-right: 70px;
+}
+.Numbers-count h5{
+    font-size: 44px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+@media (max-width: 480px) {
+    .Home {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .Numbers-count {
+        height: 250px;
+        width: 300px;
+        margin: 0.5rem 0;
+        padding: 1rem;
+    }
+
+    .btn {
+        padding: 1rem 0.5rem;
+        font-size: 16px;
+    }
+
+     .Numbers-count h5 {
+       
+        font-size: 40px;
+    }
+    .Numbers-count h2{
+        margin-left: 10px;
+        margin-top: 20px;
+        font-size: large;
+    }
+}
+
+/* Small devices (phones in landscape and tablets, 481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .Home {
+
+        flex-direction: column;
+        height: 750px;
+        padding: 1.5rem;
+    }
+
+    .Numbers-count {
+        height: auto;
+        margin: 0.75rem 0;
+        padding: 1.5rem;
+    }
+
+    .btn {
+        padding: 1.25rem 0.5rem;
+        font-size: 18px;
+    }
+
+    .Numbers-count h2, .Numbers-count h5 {
+        font-size: larger;
+    }
+}
+
+/* Medium devices (tablets in portrait mode, 769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .Home {
+        flex-direction: row;
+        height: 750px;
+        padding: 2rem;
+    }
+
+    .Numbers-count {
+        height: 200px;
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    .btn {
+        padding: 1.5rem 0.5rem;
+        font-size: 20px;
+    }
+
+    .Numbers-count h2, .Numbers-count h5 {
+        font-size: x-large;
+    }
+}
+
+/* Large devices (desktops, 1025px to 1280px) */
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .Home {
+        flex-direction: row;
+        height: 750px;
+        padding: 2rem;
+    }
+
+    .Numbers-count {
+        margin: 1rem 30px;
+    }
+
+    .btn {
+        padding: 1.75rem 0.5rem;
+        font-size: 20px;
+    }
+}
+
+/* Extra large devices (large desktops, 1281px and up) */
+@media (min-width: 1281px) {
+    .Home {
+        justify-content: space-between;
+        
+    }
+
+    .Numbers-count {
+        margin: 1rem 30px;
+    }
+
+    .btn {
+        padding: 1.75rem 0.5rem;
+        font-size: 20px;
+    }
+}

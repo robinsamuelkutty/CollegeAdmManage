@@ -1,0 +1,76 @@
+.MNavbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+     /* 110px converted to rem (assuming root font size is 16px) */
+    padding-right: 1rem;
+    color: black;
+    margin-left: 2rem;
+    border-bottom: 1px solid lavender;
+    height: 115px;
+}
+.logo{
+    height: 100px;
+}
+.username {
+    flex: 1; /* Use flex for better responsiveness */
+    display: flex;
+    justify-content: right;
+    margin-right: 50px;
+}
+
+.userlogo {
+    height: 1.875rem;
+    /* 30px converted to rem */
+}
+
+.username h3 {
+    padding-left: 7px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .MNavbar {
+       
+        
+        padding-right: 0.5rem;
+        margin-left: 1rem;
+    }
+
+    .username {
+        text-align: center;
+        width: 100%;
+        justify-content: center;
+        margin-right: 0;
+        padding: 0.5rem 0;
+    }
+
+    .username h3 {
+        margin-left: 5px;
+    }
+    .userlogo{
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .MNavbar {
+        padding-right: 0.5rem;
+        margin-left: 1rem;
+    }
+
+    .username {
+       
+        align-items: center;
+        margin-right: 0;
+    }
+
+    .username h3 {
+        padding-left: 0;
+        padding-top: 0.5rem;
+    }
+
+    .userlogo {
+        height: 1.5rem; /* Further reduce size for very small screens */
+    }
+}

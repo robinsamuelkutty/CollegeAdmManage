@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+   
+}
+
+header {
+    height: 115px;
+    display: flex;
+    align-items: center;
+    color: black;
+    border-bottom: 1px solid lavender;
+    padding: 0 20px;
+}
+
+header img {
+    height: 100px;
+    margin-right: 20px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+nav a {
+    margin: 2.5rem;
+    color: black;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: gray;
+}
+
+header h1 {
+    font-size: 25px;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header .nav-btn {
+    padding: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--textColor);
+    visibility: hidden;
+    opacity: 0;
+    font-size: 1.8rem;
+}
+
+@media only screen and (max-width: 1024px) {
+	header .nav-btn {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	header nav {
+		position: fixed;
+		top: -100vh;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 1.5rem;
+		background-color: aliceblue;
+		transition: 1s;
+	}
+
+	header .responsive_nav {
+		transform: translateY(100vh);
+	}
+
+	nav .nav-close-btn {
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+	}
+
+	nav a {
+		font-size: 1.5rem;
+	}
+    header img {
+        height: 90px;
+        margin-right: 20px;
+    }
+}

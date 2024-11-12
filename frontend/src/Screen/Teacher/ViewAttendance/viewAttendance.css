@@ -1,0 +1,208 @@
+/* General styles */
+.viewAttendance {
+  padding: 2rem;
+  font-family: 'PT Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: aliceblue;
+
+}
+
+.zxc {
+  background-color: aliceblue;
+}
+
+.back-btn {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+.back-btn:hover {
+  background-color: #0056b3;
+}
+
+.percentAttendance table {
+  width: 80%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  
+}
+
+.percentAttendance th,
+.percentAttendance td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.percentAttendance th {
+  background-color: #f2f2f2;
+}
+
+.percentAttendance thead {
+  
+  top: 0;
+  z-index: 2;
+  
+}
+.table-container {
+ margin-left: 250px;
+  overflow-y: auto; 
+  position: relative;
+}
+
+.percentAttendance tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.percentAttendance tr:hover {
+  background-color: #ddd;
+}
+
+.viewAttendance h5 {
+  font-size: 25px;
+  text-align: center;
+}
+
+.percentAttendance {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.percentAttendance button {
+  margin-left: 800px;
+}
+
+.nameThv {
+  width: 200px;
+}
+
+.desktop-view-message {
+  display: none;
+  color: red;
+  /* Optional: Change the color to red or any color you prefer */
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Extra small devices (phones, 480px and down) */
+@media (max-width: 480px) {
+  .viewAttendance {
+    padding: 1rem;
+
+  }
+
+  .percentAttendance table {
+    width: 100%;
+
+
+  }
+
+  .percentAttendance th {
+    font-size: 17px;
+  }
+
+  .back-btn {
+    margin-left: 30px;
+  }
+
+  .percentAttendance button {
+    margin-left: 300px;
+  }
+
+  .nameThv {
+    width: 140px;
+  }
+
+  .verticalTh {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    width: 40px;
+  }
+
+  .percentAttendance td {
+    font-size: 13px;
+  }
+
+  .desktop-view-message {
+    display: block;
+  }
+  .table-container{
+    margin-left: 0px;
+  }
+
+}
+
+/* Small devices (phones in landscape and tablets, 481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .viewAttendance {
+    padding: 0.5rem;
+  }
+
+  .percentAttendance table {
+    width: 90%;
+
+  }
+
+  .verticalTh {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+  }
+  .table-container{
+    margin-left: 50px;
+  }
+}
+
+/* Medium devices (tablets in portrait mode, 769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .viewAttendance {
+    padding: 1.5rem;
+  }
+
+  .percentAttendance table {
+    width: 90%;
+  }
+  .table-container{
+    margin-left: 80px;
+  }
+
+}
+
+/* Large devices (desktops, 1025px to 1280px) */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .viewAttendance {
+    padding: 2rem;
+  }
+
+  .percentAttendance table {
+    width: 90%;
+  }
+  .table-container{
+    margin-left: 100px;
+  }
+
+}
+
+/* Extra large devices (large desktops, 1281px and up) */
+@media (min-width: 1281px) {
+  .viewAttendance {
+    padding: 2rem;
+  }
+
+
+
+
+}

@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+
+/* Styling for the teacherHome container */
+.teacherHome {
+    padding: 2rem;
+    background:aliceblue;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.teacherHome h5 {
+    font-size: 2rem;
+    color: #0C2D57;
+    margin-bottom: 1rem;
+    text-shadow: 0 1px 3px #444;
+    margin-left: 2rem;
+}
+
+.selectCls {
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 50px;
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.selectCls h3 {
+    font-size: 1.7rem;
+    color: #444;
+    margin-bottom: 1rem;
+    font-family: 'PT Sans', sans-serif;
+    gap: 50px;
+}
+
+.card {
+    background-color: #0C2D57;
+    border-radius: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'PT Sans', sans-serif;
+    padding: 10px;
+    margin: 10px;
+    height: 230px;
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card h4 {
+    font-size: 4.5rem;
+    color: white;
+}
+.card h6 {
+    font-size: 2rem;
+    color: white;
+}
+
+
+.card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+.zxc{
+    background-color: aliceblue;
+}
+.back-btn{
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 50px;
+    margin-top: 20px;
+    transition: transform  0.3s ease;
+}
+.back-btn:hover{
+    transform: translateY(-3px);
+    background-color: #0056b3;
+    
+}
+
+/* Extra small devices (phones, 480px and down) */
+@media (max-width: 480px) {
+    .teacherHome {
+        padding: 0.5rem;
+        
+    }
+
+    .selectCls {
+        padding: 0.5rem;
+        
+    }
+
+    .selectCls h3 {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        height: 230px;
+        padding: 0.5rem;
+        margin-left: 20px;
+    }
+
+    .card h1 {
+        font-size: 3rem;
+    }
+}
+
+/* Small devices (phones in landscape and tablets, 481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .teacherHome {
+        padding: 1rem;
+    }
+
+    .selectCls {
+        padding: 1rem;
+    }
+
+    .card {
+        height: 230px;
+        padding: 1rem;
+    }
+}
+
+/* Medium devices (tablets in portrait mode, 769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .teacherHome {
+        padding: 1.5rem;
+    }
+
+    .selectCls {
+        padding: 1.5rem;
+    }
+
+    .card {
+        
+        padding: 1.5rem;
+    }
+}
+
+/* Large devices (desktops, 1025px to 1280px) */
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .teacherHome {
+        padding: 2rem;
+    }
+
+    .selectCls {
+        padding: 2rem;
+    }
+
+    .card {
+       
+        padding: 2rem;
+    }
+}
+
+/* Extra large devices (large desktops, 1281px and up) */
+@media (min-width: 1281px) {
+    .teacherHome {
+        padding: 2rem;
+    }
+
+    .selectCls {
+        padding: 2rem;
+    }
+
+    .card {
+       
+        padding: 2rem;
+    }
+}

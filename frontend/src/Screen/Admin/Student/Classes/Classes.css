@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.class {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    height: 100vh;
+    font-family: "PT Sans", sans-serif;
+    background-color: aliceblue;
+}
+
+.dpt {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.Table-section {
+    padding: 20px;
+    width: 90%;
+    max-width: 700px;
+    margin: 20px auto 0;
+    overflow-x: auto; /* Enables horizontal scrolling on small screens */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    table-layout: fixed;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    background-color: #f6f9fc;
+    color: #0C2D57;
+    font-size: larger;
+    font-family: "PT Sans", sans-serif;
+    padding: 10px;
+}
+
+th, td {
+    padding: 10px 20px;
+    border-bottom: 1px solid gray;
+    word-break: break-all;
+    text-align: center;
+    font-weight: bold;
+    font-family: "PT Sans", sans-serif;
+}
+
+.Table-section input[type="text"] {
+    width: calc(50% - 22px);
+    padding: 10px 20px;
+    color: forestgreen;
+    border: 1px solid green;
+    outline: none;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+::placeholder {
+    color: forestgreen;
+}
+
+.class button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.class button:last-child {
+    margin-right: 0;
+}
+
+.class button:hover {
+    opacity: 0.6;
+}
+
+.addc-btn {
+    color: white;
+    background-color: forestgreen;
+}
+
+.editc-btn {
+    color: white;
+    background-color:rgba(255, 219, 14, 0.844) ;
+}
+
+.dltc-btn {
+    color: white;
+    background-color: crimson;
+}
+
+tr:hover {
+    color: darkcyan;
+    cursor: pointer;
+}
+.thclass{
+    width: 400px;
+}
+.goto {
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+    transition: transform 0.3s ease;
+}
+
+.goto:hover {
+    transform: scale(1.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .Table-section {
+        width: 100%;
+    }
+
+    .Table-section input[type="text"] {
+        width: calc(100% - 22px);
+    }
+
+    th, td {
+        padding: 10px;
+        font-size: smaller;
+    }
+}
+
+@media (max-width: 480px) {
+    th, td {
+        padding: 5px;
+        font-size: smaller;
+    }
+
+    button {
+        padding: 5px 10px;
+        font-size: smaller;
+    }
+
+    .dpt {
+        font-size: larger;
+    }
+    .thclass{
+        width: 250px;
+    }
+}

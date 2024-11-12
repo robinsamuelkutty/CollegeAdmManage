@@ -1,0 +1,474 @@
+.react-datepicker {
+    font-family: 'PT Sans', sans-serif;
+    border: 1px solid #0C2D57;
+    border-radius: 10px;
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.react-datepicker__header {
+    background-color: #0C2D57;
+    color: #0C2D57;
+    padding: 1.2rem;
+}
+
+
+.react-datepicker__current-month,
+.react-datepicker__day-name {
+    color: white;
+}
+
+.react-datepicker__day {
+    color: #0C2D57;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.react-datepicker__day:hover {
+    background-color: #0A223E;
+    color: white;
+}
+
+.react-datepicker__day--selected {
+    background-color: #0A223E;
+    color: white;
+}
+
+.react-datepicker__day--keyboard-selected {
+    background-color: #0A223E;
+    color: white;
+}
+
+.react-datepicker__day--today {
+    font-weight: bold;
+    color: #0C2D57;
+}
+
+.react-datepicker__day--outside-month {
+    color: #ccc;
+}
+.react-datepicker__navigation--previous {
+    border-right-color: black; /* Change to white */
+    left: 10px;
+    margin-top: 2px;
+}
+
+.react-datepicker__navigation--next {
+    border-left-color: white; /* Change to white */
+    right: 10px;
+    margin-top: 2px;
+}
+
+.react-datepicker__navigation:hover {
+    border-color: #ccc; /* Optional: Change hover color */
+}
+
+.view-day-attendance {
+    padding: 2rem;
+    font-family: 'PT Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: aliceblue;
+}
+
+.popup ,.lesson-popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content{
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+   
+    text-align: center;
+}
+
+.all-present-checkbox {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.all-present-checkbox label {
+  font-size: 16px;
+  color: #0C2D57;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.all-present-checkbox input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.lesson-popup h3 {
+  margin-bottom: 10px;
+}
+
+.lesson-popup textarea {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  
+}
+.lesson-popup-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+ height: 250px;
+  text-align: center;
+}
+ .delivery-methods label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  float: left;
+  margin-left: 10px;
+}
+
+.delivery-methods input[type="check-box"] {
+  margin-right: 5px;
+  
+  
+}
+.attendanceSheet h5 {
+  font-size: 1.4rem;
+  color: #0C2D57;
+ 
+  
+  margin-left: 2rem;
+}
+.takeAtten {
+    padding-bottom: 1rem;
+    font-family: 'PT Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: aliceblue;
+  }
+  
+  .sltdate {
+    margin-bottom: 20px;
+  }
+  
+  .date-btn {
+    margin-top: 40px;
+    padding: 15px 30px;
+    background-color:#133767;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .takeAttendence-btn{
+    margin-top: 30px;
+    padding: 15px 30px;
+    background-color:#133767;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  .takeAttendence-btn:hover{
+    background-color: #0C2D57;
+  }
+  .date-btn:hover {
+    background-color: #0A223E;
+  }
+  
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  .close-bttn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+  }
+  .close-bttn:hover{
+    color: crimson;
+  }
+  .selected-date {
+    margin-top: 15px;
+    font-size: 1.4rem;
+    color: #0C2D57;
+    font-weight: 600;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .absenties {
+    margin-top: 20px;
+  }
+  
+  .absenties label {
+    font-size: 16px;
+  }
+  
+  .absenties input {
+    margin-left: 10px;
+    padding: 8px ;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    font-size: 13.9px;
+  }
+  
+  .absenties input:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  .save-btn {
+    margin-left: 10px;
+    padding: 8px 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .save-btn:hover {
+    background-color: #218838;
+  }
+  
+  .attendanceSheet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .attendanceSheet h5 {
+    text-align: center;
+    padding-bottom: 40px;
+  }
+  
+  .attendanceSheet table {
+    width: 70%;
+    border-collapse: collapse;
+  }
+  
+  .attendanceSheet th, .attendanceSheet td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .attendanceSheet th {
+    background-color: #f2f2f2;
+  }
+  
+  .present {
+    color: green;
+  }
+  
+  .absent {
+    color: red;
+  }
+  
+  .attendanceSheet h3 {
+    margin-top: 20px;
+  }
+  
+  .attendanceSheet p {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  .hour-select {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #0C2D57;
+    font-weight: 600;
+}
+
+.hour-select label {
+    margin-right: 0.5rem;
+}
+
+.hour-select select {
+    padding: 0.5rem;
+    border: 1px solid #0C2D57;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #0C2D57;
+    font-weight: 500;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 16px;
+}
+
+.hour-select select:focus {
+    outline: none;
+    border-color: #0A1E40;
+    box-shadow: 0 0 0 3px rgba(12, 45, 87, 0.2);
+}
+
+@media (max-width: 480px) {
+  
+  .popup-content,
+  .attendanceSheet table {
+      width: 90%;
+  }
+
+  .date-btn,
+  .takeAttendence-btn {
+      padding: 10px 20px;
+      font-size: 16px;
+  }
+
+  .selected-date {
+      font-size: 1.2rem;
+  }
+.absenties label{
+  margin-left: 22px;
+}
+  .absenties .save-btn {
+    margin-left: 170px;
+    margin-top: 20px;
+      
+  }
+}
+
+/* Small devices (phones in landscape and tablets, 481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .popup-content,
+  .attendanceSheet table {
+      width: 80%;
+  }
+
+  .date-btn,
+  .takeAttendence-btn {
+      padding: 12px 25px;
+      font-size: 17px;
+  }
+
+  .selected-date {
+      font-size: 1.3rem;
+  }
+
+  .absenties input {
+      width: 180px;
+  }
+}
+
+/* Medium devices (tablets in portrait mode, 769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .popup-content,
+  .attendanceSheet table {
+      width: 75%;
+  }
+
+  .date-btn,
+  .takeAttendence-btn {
+      padding: 14px 28px;
+      font-size: 18px;
+  }
+
+  .selected-date {
+      font-size: 1.4rem;
+  }
+
+  .absenties input {
+      width: 200px;
+  }
+}
+
+/* Large devices (desktops, 1025px to 1280px) */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .popup-content,
+  .attendanceSheet table {
+      width: 70%;
+  }
+
+  .date-btn,
+  .takeAttendence-btn {
+      padding: 15px 30px;
+      font-size: 18px;
+  }
+
+  .selected-date {
+      font-size: 1.4rem;
+  }
+
+  .absenties input {
+      width: 200px;
+  }
+}
+
+/* Extra large devices (large desktops, 1281px and up) */
+@media (min-width: 1281px) {
+  .popup-content,
+  .attendanceSheet table {
+      width: 65%;
+  }
+
+  .date-btn,
+  .takeAttendence-btn {
+      padding: 15px 30px;
+      font-size: 18px;
+  }
+
+  .selected-date {
+      font-size: 1.4rem;
+  }
+
+  .absenties input {
+      width: 200px;
+  }
+}
+
+  

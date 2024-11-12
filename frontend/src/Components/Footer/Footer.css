@@ -1,0 +1,25 @@
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #0C2D57;
+  
+    bottom: 0;
+    width: 100%;
+    color: white;
+    height: 80px;
+  }
+  
+  footer p {
+    margin-top: 10px;
+    margin: 0;
+    font-size: 14px;
+    
+  }
+  footer a{
+    color: white;
+    text-decoration: none;
+    margin-left: 5px;
+  }
+  
+  
+  

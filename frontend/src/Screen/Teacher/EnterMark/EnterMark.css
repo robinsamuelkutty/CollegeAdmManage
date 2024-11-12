@@ -1,0 +1,217 @@
+.enterMark {
+    padding: 2rem;
+    font-family: 'PT Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: aliceblue;
+}
+  
+.enterMark h5 {
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+  
+.markTable {
+    width: 80%;
+    overflow-x: auto;
+}
+  
+.markTable table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+  
+.markTable th,
+.markTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+  
+.markTable th {
+    background-color: #f2f2f2;
+    font-size: 16px;
+}
+  
+.markTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+  
+.markTable tr:hover {
+    background-color: #ddd;
+}
+  
+.markTable button {
+    background-color: forestgreen;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 14px;
+}
+  
+.markTable button:hover {
+    background-color: darkgreen;
+}
+  
+.markTable input {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Extra small devices (phones, 480px and down) */
+@media (max-width: 480px) {
+  .enterMark {
+    padding: 0rem;
+  }
+
+  .markTable {
+    width: 100%;
+  }
+
+  .markTable th,
+  .markTable td {
+    padding: 6px;
+  }
+
+  .markTable button {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  .rollnoTh{
+    width: 80px;
+  }
+  .nameTh{
+    width: 140px;
+  }
+  .viewMarkTh{
+    width: 80px;
+  }
+  th.celTh::before {
+    content: "CEL";
+    display: block;
+  }
+
+  th.celTh span {
+    display: none;
+  }
+
+  th.catTh::before {
+    content: "CAT";
+    display: block;
+  }
+
+  th.catTh span {
+    display: none;
+  }
+}
+
+/* Small devices (phones in landscape and tablets, 481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .enterMark {
+    padding: 1.5rem;
+  }
+
+  .markTable {
+    width: 100%;
+  }
+
+  .markTable th,
+  .markTable td {
+    padding: 7px;
+  }
+
+  .markTable button {
+    padding: 9px 13px;
+    font-size: 13px;
+  }
+  th.celTh::before {
+    content: "CEL";
+    display: block;
+  }
+
+  th.celTh span {
+    display: none;
+  }
+
+  th.catTh::before {
+    content: "CAT";
+    display: block;
+  }
+
+  th.catTh span {
+    display: none;
+  }
+}
+
+/* Medium devices (tablets in portrait mode, 769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .enterMark {
+    padding: 1.5rem;
+  }
+
+  .markTable {
+    width: 90%;
+  }
+
+  .markTable th,
+  .markTable td {
+    padding: 8px;
+  }
+
+  .markTable button {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+}
+
+/* Large devices (desktops, 1025px to 1280px) */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .enterMark {
+    padding: 2rem;
+  }
+
+  .markTable {
+    width: 80%;
+  }
+
+  .markTable th,
+  .markTable td {
+    padding: 8px;
+  }
+
+  .markTable button {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
+
+/* Extra large devices (large desktops, 1281px and up) */
+@media (min-width: 1281px) {
+  .enterMark {
+    padding: 2rem;
+  }
+
+  .markTable {
+    width: 80%;
+  }
+
+  .markTable th,
+  .markTable td {
+    padding: 8px;
+    
+  }
+
+  .markTable button {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+  
+}
