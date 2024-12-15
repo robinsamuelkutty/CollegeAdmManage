@@ -1,4 +1,4 @@
-#College Administration System (CE Poonjar)
+**College Administration System (CE Poonjar)**
 
 Developed a comprehensive College Administration System for my institution using the MERN stack (MongoDB, Express.js, React, Node.js). This system streamlines administrative, academic, and student-related tasks through separate modules for faculty, students, and administrators, ensuring seamless operation across all roles.
 
