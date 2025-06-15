@@ -51,6 +51,9 @@ app.use('/api',attendanceRouter);
 app.use('/api',markRouter);
 app.use('/api',adminRouter)
 
+app.get('/', (req, res) => {
+  res.send('🎉 Backend is working!');
+});
 // Catch 404 and forward to error handler
 app.use((req, res, next) => {
   next(createError(404));
