@@ -18,7 +18,7 @@ function StdDetails() {
   useEffect(() => {
     const fetchStudents = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/students`, { params: { class: className, department: departmentName, course: course } });
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/students`, { params: { class: className, department: departmentName, course: course } });
         console.log("data", response.data)
         setStudents(response.data.sort((a, b) => parseInt(a.rollNo, 10) - parseInt(b.rollNo, 10)));
       } catch (error) {
@@ -36,7 +36,7 @@ function StdDetails() {
   const handleAddStudent = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/students', { ...newStudent });
+      const response = await axios.post(`${process.env.REACT_APP_BACKEND_BASEURL}/api/students`, { ...newStudent });
       setStudents(prevStudents => [...prevStudents, response.data].sort((a, b) => parseInt(a.rollNo, 10) - parseInt(b.rollNo, 10)));
       setNewStudent({ rollNo: '', admissionYear:'',registerNo: '', name: '', password: '', classId: classId, class: className, department: departmentName, course: course });
       setIsModalOpen(false);
@@ -52,7 +52,7 @@ function StdDetails() {
 
   const handleSaveEdit = async () => {
     try {
-      const response = await axios.put(`http://localhost:5000/api/students/${students[editingIndex]._id}`, editingStudent);
+      const response = await axios.put(`${process.env.REACT_APP_BACKEND_BASEURL}/api/students/${students[editingIndex]._id}`, editingStudent);
       const updatedStudents = [...students];
       updatedStudents[editingIndex] = response.data;
       setStudents(updatedStudents.sort((a, b) => parseInt(a.rollNo, 10) - parseInt(b.rollNo, 10)));
@@ -65,7 +65,7 @@ function StdDetails() {
 
   const handleDeleteStudent = async (index) => {
     try {
-      await axios.delete(`http://localhost:5000/api/students/${students[index]._id}`);
+      await axios.delete(`${process.env.REACT_APP_BACKEND_BASEURL}/api/students/${students[index]._id}`);
       setStudents(prevStudents => prevStudents.filter((_, i) => i !== index).sort((a, b) => parseInt(a.rollNo, 10) - parseInt(b.rollNo, 10)));
     } catch (error) {
       console.error('Error deleting student:', error);

@@ -15,7 +15,7 @@ function Course(){
     useEffect(() => {
         const fetchCourses = async () => {
           try {
-            const response = await axios.get('/api/courses');
+            const response = await axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/courses`);
             setCourses(response.data);
           } catch (error) {
             console.error('Error fetching courses:', error);
@@ -32,7 +32,7 @@ function Course(){
         try {
           const existingCourse = courses.find(c => c.name === course);
           if (!existingCourse) {
-            await axios.post('/api/courses', { name: course });
+            await axios.post(`${process.env.REACT_APP_BACKEND_BASEURL}/api/courses`, { name: course });
             setCourses([...courses, { name: course }]);
           }
           navigate(`/Tdepartment/${course}`, { state: { course } });

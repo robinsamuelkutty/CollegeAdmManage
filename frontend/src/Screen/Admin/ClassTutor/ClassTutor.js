@@ -23,7 +23,7 @@ const [selectedClass, setSelectedClass] = useState(null);
   useEffect(() => {
     const fetchTeachers = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/teachers');
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/teachers`);
         setTeachers(response.data);
       } catch (error) {
         console.error('Error fetching teachers:', error);
@@ -42,7 +42,7 @@ const [selectedClass, setSelectedClass] = useState(null);
 
   const fetchDepartments = async (course) => {
     try {
-      const response = await axios.get(`/api/departments?course=${course}`);
+      const response = await axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/departments?course=${course}`);
       setDepartments(response.data);
     } catch (error) {
       console.error('Error fetching departments:', error);
@@ -61,7 +61,7 @@ const [selectedClass, setSelectedClass] = useState(null);
     
     try {
       
-      const response = await axios.get(`http://localhost:5000/api/classes?departmentId=${selectedDepartment._id}`);
+      const response = await axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/classes?departmentId=${selectedDepartment._id}`);
       setClasses(response.data);
       console.log("classes in fetch classes",response.data)
     } catch (error) {
@@ -80,7 +80,7 @@ const [selectedClass, setSelectedClass] = useState(null);
     const fetchTeachersInClass = async () => {
       console.log("Fetching teachers in class");
       try {
-        const response = await axios.get('http://localhost:5000/api/teachersInClass', {
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/teachersInClass`, {
           params: {
             tutor: true  // Only fetch teachers who are tutors
           }
@@ -111,7 +111,7 @@ const [selectedClass, setSelectedClass] = useState(null);
       return;
     }
   
-    axios.post('/api/teachers/addToClass', {
+    axios.post(`${process.env.REACT_APP_BACKEND_BASEURL}/api/teachers/addToClass`, {
       teacherId: selectedTeacher._id,
       course: selectedCourse,
       department: selectedDepartment, // Now passing the whole department object
@@ -137,7 +137,7 @@ const [selectedClass, setSelectedClass] = useState(null);
     setTeachersInClass(updatedTeachers);
     setEditingIndex(null);
 
-    axios.put(`/api/teachers/update/${editingTeacher._id}`, editingTeacher)
+    axios.put(`${process.env.REACT_APP_BACKEND_BASEURL}/api/teachers/update/${editingTeacher._id}`, editingTeacher)
       .then(response => {
         console.log('Teacher updated successfully:', response.data);
       })
@@ -159,7 +159,7 @@ const [selectedClass, setSelectedClass] = useState(null);
     console.log("Teacher ID in delete section:", teacherToDelete._id);
   
     // Make the DELETE request with the class ID
-    axios.delete(`/api/teachers/removeFromClass/${teacherToDelete._id}`, {
+    axios.delete(`${process.env.REACT_APP_BACKEND_BASEURL}/api/teachers/removeFromClass/${teacherToDelete._id}`, {
         data: { classId }
       })
       .then(response => {

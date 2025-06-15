@@ -13,7 +13,9 @@ function AdminLogin() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post('/api/admin/login', { username, password });
+      console.log("ENV Backend URL:", process.env.REACT_APP_BACKEND_BASEURL);
+
+      const response = await axios.post(`${process.env.REACT_APP_BACKEND_BASEURL}/api/admin/login`, { username, password });
       const { data } = response;
       if (response.data.success) {
         // Save admin data to localStorage

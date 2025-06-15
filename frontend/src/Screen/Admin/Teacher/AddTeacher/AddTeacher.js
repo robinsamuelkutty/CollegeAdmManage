@@ -24,7 +24,7 @@ function AddTeacher() {
   const handleSave = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/teachers', newTeacher); // Updated endpoint
+      const response = await axios.post(`${process.env.REACT_APP_BACKEND_BASEURL}/api/teachers`, newTeacher); // Updated endpoint
       console.log(response.data);
       setNewTeacher({
         userId: '',

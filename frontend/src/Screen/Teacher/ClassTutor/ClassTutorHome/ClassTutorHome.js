@@ -25,7 +25,7 @@ function ClassTutorHome() {
         }
     
         try {
-          const response = await axios.get(`/api/teachers/${user.teacher._id}/classes`);
+          const response = await axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/teachers/${user.teacher._id}/classes`);
           setClasses(response.data);
           console.log("Classes fetched:", response.data);
         } catch (error) {

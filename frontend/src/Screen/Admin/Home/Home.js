@@ -17,12 +17,12 @@ function Home() {
 
   useEffect(() => {
     // Fetch student count
-    axios.get('http://localhost:5000/api/students/count') // Adjust the URL if needed
+    axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/students/count`) // Adjust the URL if needed
       .then(response => setStudentCount(response.data.count))
       .catch(error => console.error('Error fetching student count:', error));
 
     // Fetch teacher count
-    axios.get('http://localhost:5000/api/teachers/count') // Adjust the URL if needed
+    axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/teachers/count`) // Adjust the URL if needed
       .then(response => setTeacherCount(response.data.count))
       .catch(error => console.error('Error fetching teacher count:', error));
   }, []);

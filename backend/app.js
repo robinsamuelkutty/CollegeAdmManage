@@ -15,7 +15,7 @@ const adminRouter = require("./routes/adminRoute")
 const app = express();
 
 // Database connection
-connectToMongoDB('mongodb://127.0.0.1:27017/CEPoonjar');
+connectToMongoDB('mongodb+srv://robinsamuelkutty77:ueYGp5TiyGCH2AkL@cepcluster.9tsxf.mongodb.net/?retryWrites=true&w=majority&appName=CEPCluster');
 
 // Middleware
 app.use(logger('dev'));
@@ -65,7 +65,6 @@ app.use((err, req, res, next) => {
   res.render('error');
 });
 
-const port = process.env.PORT || 5000;
-app.listen(port, () => console.log(`Server running on port ${port}`));
+
 
 module.exports = app;

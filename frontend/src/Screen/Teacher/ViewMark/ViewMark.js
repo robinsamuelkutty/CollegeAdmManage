@@ -14,7 +14,7 @@ function ViewMark() {
   useEffect(() => {
     const fetchMarks = async () => {
       try {
-        const response = await axios.get('/api/marks', {
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/marks`, {
           params: {
             className,
             department,

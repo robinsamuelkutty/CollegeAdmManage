@@ -13,7 +13,7 @@ function UserLogin() {
 
   const handleUserChange = (user) => {
     setActiveUser(user);
-    setCredentials({ userId: '', password: '' }); // Reset credentials when changing user type
+    setCredentials({ userId: '', password: '' }); 
     setError('');
   };
 
@@ -27,7 +27,10 @@ function UserLogin() {
     const { userId, password } = credentials;
 
     try {
-      const endpoint = activeUser === 'student' ? '/api/students/login' : '/api/teachers/login';
+      const endpoint = activeUser === 'student'
+  ? `${process.env.REACT_APP_BACKEND_BASEURL}/api/students/login`
+  : `${process.env.REACT_APP_BACKEND_BASEURL}/api/teachers/login`;
+
       const response = await axios.post(endpoint, { userId, password });
       const { data } = response;
 
@@ -42,7 +45,19 @@ function UserLogin() {
   };
 
   return (
+    <>
+    <div className="zxc">
+        <button
+          className="back-btn"
+          onClick={() =>
+            navigate("/admin")
+          }
+        >
+          Admin Login
+        </button>
+    </div>
     <div className="user-login-container">
+
       <div className="login-card">
         <img src={loginLogo} alt="Logo" className="Loginlogo" />
         <div className="user-options">
@@ -124,6 +139,7 @@ function UserLogin() {
         {error && <p className="error" style={{color:"red"}}>{error}</p>}
       </div>
     </div>
+    </>
   );
 }
 

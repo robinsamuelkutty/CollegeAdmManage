@@ -16,7 +16,7 @@ function CTselectSub() {
         const fetchSubjects = async () => {
             
             try {
-                const response = await axios.get(`/api/subjectsforCT`, {
+                const response = await axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/subjectsforCT`, {
                     params: { course, department, className }
                 });
                 setSubjects(response.data);

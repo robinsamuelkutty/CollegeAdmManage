@@ -33,7 +33,7 @@ function AddStud() {
 
   const fetchDepartments = async (course) => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/departments?course=${course}`);
+      const response = await axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/departments?course=${course}`);
       setDepartments(response.data);
     } catch (err) {
       console.error('Error fetching departments:', err);
@@ -44,7 +44,7 @@ function AddStud() {
   const handleSave = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/students', newStudent);
+      const response = await axios.post(`${process.env.REACT_APP_BACKEND_BASEURL}/api/students`, newStudent);
       console.log(response.data);
       setNewStudent({
         yearScheme:'',

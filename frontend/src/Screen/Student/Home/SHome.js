@@ -18,7 +18,7 @@ function SHome() {
   useEffect(() => {
     const fetchStudentDetails = async () => {
       try {
-        const response = await axios.get(`/api/students/${user.registerNo}`);
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/students/${user.registerNo}`);
         setStudent(response.data);
       } catch (error) {
         console.error('Error fetching student details:', error);

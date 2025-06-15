@@ -20,7 +20,7 @@ function ViewInternalMark() {
     const fetchMarks = async () => {
       try {
         // Fetch internal marks for the subject
-        const response = await axios.get('/api/internalmarks', {
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/internalmarks`, {
           params: {
             className,
             department,
@@ -66,7 +66,7 @@ function ViewInternalMark() {
         setMarks(sortedMarks);
 
         // Fetch attendance records to get total classes
-        const attendanceResponse = await axios.get('/api/attendance', {
+        const attendanceResponse = await axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/attendance`, {
           params: {
             course,
             department,

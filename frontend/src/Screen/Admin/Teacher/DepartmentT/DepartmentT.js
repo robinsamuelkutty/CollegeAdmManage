@@ -16,7 +16,7 @@ const TDepartment = () => {
   useEffect(() => {
     const fetchDepartments = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/departments?course=${course}`);
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/departments?course=${course}`);
         setDepartments(response.data);
       } catch (error) {
         console.error('Error fetching departments:', error);
@@ -28,7 +28,7 @@ const TDepartment = () => {
   const handleAddDepartment = async () => {
     if (newDepartmentName.trim() !== '') {
       try {
-        const response = await axios.post('http://localhost:5000/api/departments', { name: newDepartmentName, course });
+        const response = await axios.post(`${process.env.REACT_APP_BACKEND_BASEURL}/api/departments`, { name: newDepartmentName, course });
         console.log('New department added:', response.data); // Log success message
         setDepartments([...departments, response.data]);
         setNewDepartmentName('');
@@ -41,7 +41,7 @@ const TDepartment = () => {
 
   const handleDeleteDepartment = async (id) => {
     try {
-      await axios.delete(`/api/departments/${id}`);
+      await axios.delete(`${process.env.REACT_APP_BACKEND_BASEURL}/api/departments/${id}`);
       setDepartments(departments.filter((dept) => dept._id !== id));
     } catch (error) {
       console.error('Error deleting department:', error);
@@ -55,7 +55,7 @@ const TDepartment = () => {
 
   const handleSaveEdit = async (id) => {
     try {
-      const response = await axios.put(`/api/departments/${id}`, { name: editDepartmentName });
+      const response = await axios.put(`${process.env.REACT_APP_BACKEND_BASEURL}/api/departments/${id}`, { name: editDepartmentName });
       setDepartments(departments.map((dept) => (dept._id === id ? response.data : dept)));
       setEditDepartment(null);
       setEditDepartmentName('');

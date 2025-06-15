@@ -13,6 +13,7 @@ const attendanceSchema = new mongoose.Schema({
     ref: 'Subject',
     required: true
   },
+  
   date: {
     type: Date,
     required: true
@@ -25,6 +26,14 @@ const attendanceSchema = new mongoose.Schema({
     type: String,
     enum: ['present', 'absent'],
     required: true
+  },
+  lessonPlan: {
+    type: String,
+    
+  },
+  deliveryMethods: {
+    type: [String],
+    
   }
 });
 

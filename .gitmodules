@@ -1,6 +1,0 @@
-[submodule "frontend"]
-	path = frontend
-	url = https://github.com/robinsamuelkutty/College-cep.git
-[submodule "frontendd"]
-	path = frontendd
-	url = https://github.com/robinsamuelkutty/College-cep.git

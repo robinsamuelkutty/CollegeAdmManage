@@ -19,7 +19,7 @@ function EnterLabMark() {
   useEffect(() => {
     const fetchStudents = async () => {
       try {
-        const response = await axios.get("/api/students", {
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/students`, {
           params: { class: className, department, course },
         });
 
@@ -89,7 +89,7 @@ function EnterLabMark() {
             subject,
             user.teacher._id
           );
-          await axios.put(`/api/marksforlab/${student._id}`, {
+          await axios.put(`${process.env.REACT_APP_BACKEND_BASEURL}/api/marksforlab/${student._id}`, {
             CEL: student.CEL,
             CAT: student.CAT,
             viva: student.viva,

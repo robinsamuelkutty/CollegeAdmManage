@@ -6,7 +6,7 @@ import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
 import { useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
-axios.defaults.baseURL = 'http://localhost:5000';
+axios.defaults.baseURL = '${process.env.REACT_APP_BACKEND_BASEURL}';
 
 function CoursePlan() {
   const navigate = useNavigate();
@@ -20,7 +20,7 @@ function CoursePlan() {
       console.log("Subject ID being sent:", subject._id);
   
       try {
-        const response = await axios.get('/api/courseplan', {
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/courseplan`, {
           params: { subjectId: subject._id }
         });
         console.log("Response from /courseplan:", response.data);

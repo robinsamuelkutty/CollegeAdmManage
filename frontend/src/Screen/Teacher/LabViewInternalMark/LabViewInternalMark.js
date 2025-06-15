@@ -19,7 +19,7 @@ function ViewLabInternalMark() {
   useEffect(() => {
     const fetchMarks = async () => {
       try {
-        const response = await axios.get('/api/marks', {
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/marks`, {
           params: {
             className,
             department,
@@ -34,7 +34,7 @@ function ViewLabInternalMark() {
         setMarks(sortedMarks);
 
         // Fetch attendance records for the subject
-        const attendanceResponse = await axios.get('/api/attendance', {
+        const attendanceResponse = await axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/attendance`, {
           params: {
             course,
             department,
@@ -63,7 +63,7 @@ function ViewLabInternalMark() {
 
         // Fetch student details to get names and roll numbers
         const studentIds = Object.keys(studentsMap);
-        const studentDetailsResponse = await axios.get('/api/students', {
+        const studentDetailsResponse = await axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/students`, {
           params: {
             studentIds,
           }
@@ -92,7 +92,7 @@ function ViewLabInternalMark() {
 
         setAttendanceData(calculatedData);
         // Fetch attendance records to get total classes
-        const attendanceReport = await axios.get('/api/attendance', {
+        const attendanceReport = await axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/attendance`, {
           params: {
             course,
             department,

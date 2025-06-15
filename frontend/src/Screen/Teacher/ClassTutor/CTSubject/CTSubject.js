@@ -21,7 +21,7 @@ function CTSubject() {
       try {
         if (subject.lab) {
           // Lab subject logic
-          const response = await axios.get('/api/marks', {
+          const response = await axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/marks`, {
             params: {
               className,
               department,
@@ -34,7 +34,7 @@ function CTSubject() {
           const sortedMarks = response.data.sort((a, b) => a.studentId.rollNo - b.studentId.rollNo);
           setMarks(sortedMarks);
 
-          const attendanceResponse = await axios.get('/api/attendance', {
+          const attendanceResponse = await axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/attendance`, {
             params: {
               course,
               department,
@@ -60,7 +60,7 @@ function CTSubject() {
           });
 
           const studentIds = Object.keys(studentsMap);
-          const studentDetailsResponse = await axios.get('/api/students', {
+          const studentDetailsResponse = await axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/students`, {
             params: { studentIds },
           });
 
@@ -92,7 +92,7 @@ function CTSubject() {
           setTotalClasses(maxClasses);
         } else {
           // Non-lab subject logic
-          const response = await axios.get('/api/internalmarks', {
+          const response = await axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/internalmarks`, {
             params: {
               className,
               department,
@@ -132,7 +132,7 @@ function CTSubject() {
           const sortedMarks = calculatedMarks.sort((a, b) => a.rollNo - b.rollNo);
           setMarks(sortedMarks);
 
-          const attendanceResponse = await axios.get('/api/attendance', {
+          const attendanceResponse = await axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/attendance`, {
             params: {
               course,
               department,
@@ -159,7 +159,7 @@ function CTSubject() {
         }
 
         // Fetch the teacher's name using the subject ID
-        const teacherResponse = await axios.get('/api/teacher-name', {
+        const teacherResponse = await axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/teacher-name`, {
           params: { subjectId: subject }
         });
 

@@ -14,7 +14,7 @@ function TeacherList() {
   useEffect(() => {
     const fetchTeachers = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/teachers');
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/teachers`);
         console.log("data", response.data);
         setTeachers(response.data);
       } catch (error) {
@@ -32,7 +32,7 @@ function TeacherList() {
 
   const handleSaveEdit = async () => {
     try {
-      const response = await axios.put(`http://localhost:5000/api/teachers/${teachers[editingIndex]._id}`, editingTeacher);
+      const response = await axios.put(`${process.env.REACT_APP_BACKEND_BASEURL}/api/teachers/${teachers[editingIndex]._id}`, editingTeacher);
       const updatedTeachers = [...teachers];
       updatedTeachers[editingIndex] = response.data;
       setTeachers(updatedTeachers);
@@ -45,7 +45,7 @@ function TeacherList() {
 
   const handleDeleteTeacher = async (index) => {
     try {
-      await axios.delete(`http://localhost:5000/api/teachers/${teachers[index]._id}`);
+      await axios.delete(`${process.env.REACT_APP_BACKEND_BASEURL}/api/teachers/${teachers[index]._id}`);
       setTeachers(prevTeachers => prevTeachers.filter((_, i) => i !== index));
     } catch (error) {
       console.error('Error deleting teacher:', error);

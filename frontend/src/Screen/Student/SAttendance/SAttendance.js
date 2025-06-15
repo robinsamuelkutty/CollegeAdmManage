@@ -19,7 +19,7 @@ function SAttendance() {
     // Fetch attendance data
     const fetchAttendance = async () => {
       try {
-        const response = await axios.get(`/api/attendance/student/${user.student._id}`);
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/attendance/student/${user.student._id}`);
         const subjectData = response.data;
 
         // Set subjects with attendance data

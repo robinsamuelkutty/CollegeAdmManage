@@ -24,7 +24,7 @@ function EditAttendance() {
   useEffect(() => {
     const fetchStudents = async () => {
       try {
-        const response = await axios.get("/api/students", {
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/students`, {
           params: {
             course,
             department,
@@ -48,7 +48,7 @@ function EditAttendance() {
 
   const fetchHours = async (date) => {
     try {
-      const response = await axios.get("/api/attendance/student", {
+      const response = await axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/attendance/student`, {
         params: { 
           studentId: students[0]._id, 
           date,
@@ -77,7 +77,7 @@ function EditAttendance() {
   const handleHourClick = async (hour) => {
     setSelectedHour(hour);
     try {
-      const response = await axios.get("/api/attendance/student", {
+      const response = await axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/attendance/student`, {
         params: {
           studentId: students[0]._id,
           date: selectedDate,
@@ -123,7 +123,7 @@ function EditAttendance() {
       return adjustedDate;
     };
     try {
-      await axios.put("/api/attendance", {
+      await axios.put(`${process.env.REACT_APP_BACKEND_BASEURL}/api/attendance`, {
         attendanceData: updatedAttendance,
         date: convertToMidnightUTC(selectedDate),
         hour: selectedHour,

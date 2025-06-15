@@ -17,7 +17,7 @@ function ViewAttendance() {
     const fetchAttendance = async () => {
       try {
         // Fetch attendance records for the subject
-        const response = await axios.get('/api/attendance', {
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/attendance`, {
           params: {
             course,
             department,
@@ -46,7 +46,7 @@ function ViewAttendance() {
 
         // Fetch students details to get names
         const studentIds = Object.keys(studentsMap);
-        const studentDetailsResponse = await axios.get('/api/students', {
+        const studentDetailsResponse = await axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/students`, {
           params: {
             studentIds,
           }

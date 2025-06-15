@@ -3,6 +3,8 @@
   const mongoose = require('mongoose');
 
   const studentSchema = new mongoose.Schema({
+    yearScheme:{ type: String },
+    admissionYear:{ type: String, required: true },
     registerNo: { type: String, required: true },
     rollNo: { type: String, required: true },
     name: { type: String, required: true },

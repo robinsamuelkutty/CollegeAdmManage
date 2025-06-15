@@ -14,7 +14,7 @@ function StudentMark() {
     const fetchMarks = async () => {
       if (user && user.student) {
         try {
-          const response = await axios.get('/api/marksofsubject', {
+          const response = await axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/marksofsubject`, {
             params: {
               studentId: user.student._id, // Send the studentId
               testName,

@@ -21,7 +21,7 @@ function ViewDayAttendance() {
 
     if (user && user.student._id) {
       try {
-        const response = await axios.get('/api/attendanceviewday/student', {
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/attendanceviewday/student`, {
           params: {
             studentId: user.student._id,
             date: date.toISOString().split('T')[0], // Format date to 'YYYY-MM-DD'

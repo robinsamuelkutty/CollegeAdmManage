@@ -14,7 +14,7 @@ function LabInternalMark() {
     const fetchMarks = async () => {
       if (user && user.student) {
         try {
-          const response = await axios.get('/api/studentlabinternalmark', {
+          const response = await axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/studentlabinternalmark`, {
             params: {
               studentId: user.student._id, // Send the studentId
             },

@@ -19,7 +19,7 @@ const Classes = () => {
     useEffect(() => {
         const fetchClasses = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/api/classes?departmentId=${departmentId}`);
+                const response = await axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/classes?departmentId=${departmentId}`);
                 setClasses(response.data);
             } catch (error) {
                 console.error('Error fetching classes:', error);
@@ -33,7 +33,7 @@ const Classes = () => {
     const handleAddClass = async () => {
         if (newClassName.trim() !== '') {
             try {
-                const response = await axios.post('http://localhost:5000/api/classes', { name: newClassName, departmentId });
+                const response = await axios.post(`${process.env.REACT_APP_BACKEND_BASEURL}/api/classes`, { name: newClassName, departmentId });
                 setClasses([...classes, response.data]);
                 setNewClassName('');
                 setIsAdding(false); // Hide input section after adding
@@ -45,7 +45,7 @@ const Classes = () => {
 
     const handleDeleteClass = async (id) => {
         try {
-            await axios.delete(`/api/classes/${id}`);
+            await axios.delete(`${process.env.REACT_APP_BACKEND_BASEURL}/api/classes/${id}`);
             setClasses(classes.filter((cls) => cls._id !== id));
         } catch (error) {
             console.error('Error deleting class:', error);
@@ -59,7 +59,7 @@ const Classes = () => {
 
     const handleSaveEdit = async (id) => {
         try {
-            const response = await axios.put(`/api/classes/${id}`, { name: editClassName });
+            const response = await axios.put(`${process.env.REACT_APP_BACKEND_BASEURL}/api/classes/${id}`, { name: editClassName });
             setClasses(classes.map((cls) => (cls._id === id ? response.data : cls)));
             setEditClass(null);
             setEditClassName('');

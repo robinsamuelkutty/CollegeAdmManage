@@ -35,7 +35,7 @@ function TakeAttendance() {
   useEffect(() => {
     const fetchStudents = async () => {
       try {
-        const response = await axios.get("/api/students", {
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/students`, {
           params: {
             course,
             department,
@@ -121,7 +121,7 @@ function TakeAttendance() {
 
           console.log("Submitting attendance for student:", payload);
 
-          const response = await axios.post("/api/attendance", payload);
+          const response = await axios.post(`${process.env.REACT_APP_BACKEND_BASEURL}/api/attendance`, payload);
           console.log("Attendance saved:", response.data);
         }
       }

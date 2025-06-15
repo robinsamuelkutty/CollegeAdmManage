@@ -5,7 +5,7 @@ async function connectToMongoDB(url){
         await mongoose.connect(url);
         console.log("Database Connection Successfully");
     }catch(err){
-        console.log('Connection Error',err,message);
+        console.log('Connection Error',err.message);
     }
 }
 module.exports={

@@ -17,7 +17,7 @@ function TeacherClass() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
-    axios.get('/api/teachers')
+    axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/teachers`)
       .then(response => {
         setTeachers(response.data);
         console.log("teachers:", response.data);
@@ -28,7 +28,7 @@ function TeacherClass() {
 
     // Fetch subjects for the selected class
     if (classId) {
-      axios.get(`/api/subjects?classId=${classId}`)
+      axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/subjects?classId=${classId}`)
         .then(response => {
           setTeachersInClass(response.data.map(subject => ({
             ...subject.teacherId,
@@ -61,7 +61,7 @@ function TeacherClass() {
     console.log("subject:", subjectData);
 
     try {
-      const response = await axios.post('http://localhost:5000/api/subjects', subjectData);
+      const response = await axios.post(`${process.env.REACT_APP_BACKEND_BASEURL}/api/subjects`, subjectData);
       const newSubject = response.data;
       console.log("newsubject", newSubject);
 
@@ -85,7 +85,7 @@ function TeacherClass() {
       console.log("Subject ID for editing:", subjectId);
   
       // Send a PUT request to update the subject
-      const response = await axios.put(`http://localhost:5000/api/subjects/${subjectId}`, {
+      const response = await axios.put(`${process.env.REACT_APP_BACKEND_BASEURL}/api/subjects/${subjectId}`, {
         userId: editingTeacher.userId,
         name: editingTeacher.name,
         subName: editingTeacher.subName,
@@ -125,7 +125,7 @@ function TeacherClass() {
       const subjectId = teacher.subjectId;  // Correctly use the subjectId
       console.log("Deleting subject with ID:", subjectId);
 
-      await axios.delete(`http://localhost:5000/api/subjects/${subjectId}`);
+      await axios.delete(`${process.env.REACT_APP_BACKEND_BASEURL}/api/subjects/${subjectId}`);
       setTeachersInClass((prevTeachers) =>
         prevTeachers.filter((_, i) => i !== index)
       );

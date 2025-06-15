@@ -5,7 +5,7 @@ import "./StudPage.css";
 import axios from "axios";
 import Footer from "../../../../Components/Footer/Footer";
 
-axios.defaults.baseURL = 'http://localhost:5000';
+axios.defaults.baseURL = `${process.env.REACT_APP_BACKEND_BASEURL}`;
 
 function StudPage() {
   const navigate = useNavigate();
@@ -15,7 +15,7 @@ function StudPage() {
   useEffect(() => {
     const fetchCourses = async () => {
       try {
-        const response = await axios.get('/api/courses');
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/courses`);
         setCourses(response.data);
       } catch (error) {
         console.error('Error fetching courses:', error);
@@ -32,10 +32,10 @@ function StudPage() {
     try {
       const existingCourse = courses.find(c => c.name === course);
       if (!existingCourse) {
-        await axios.post('/api/courses', { name: course });
+        await axios.post(`${process.env.REACT_APP_BACKEND_BASEURL}/api/courses`, { name: course });
         setCourses([...courses, { name: course }]);
       }
-      navigate(`/department/${course}`, { state: { course } });
+      navigate(`${process.env.REACT_APP_BACKEND_BASEURL}/department/${course}`, { state: { course } });
       console.log(course)
     } catch (error) {
       console.error('Error handling course click:', error);

@@ -15,7 +15,7 @@ function THome() {
   useEffect(() => {
     if (user?.teacher?._id) {
       // Fetch subjects based on teacher's ID
-      axios.get(`/api/teachers/${user.teacher._id}/subjects`)
+      axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/teachers/${user.teacher._id}/subjects`)
         .then(response => {
           setSubjects(response.data);
         })

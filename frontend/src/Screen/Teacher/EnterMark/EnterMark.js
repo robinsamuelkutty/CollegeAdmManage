@@ -17,7 +17,7 @@ function EnterMark() {
   useEffect(() => {
     const fetchStudents = async () => {
       try {
-        const response = await axios.get('/api/students', {
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/api/students`, {
           params: { class: className, department, course }
         });
         
@@ -61,7 +61,7 @@ function EnterMark() {
           subject,
           user.teacher._id )
         if (student.mark) {
-          await axios.put(`/api/marks/${student._id}`, {
+          await axios.put(`${process.env.REACT_APP_BACKEND_BASEURL}/api/marks/${student._id}`, {
             mark: student.mark,
             testName,
             subject,
