@@ -63,9 +63,11 @@ function CTselectSub() {
                                             alt='Go to'
                                             onClick={() => navigate("/subjectCT", {
                                                 state: {
+                                                    user,
                                                     course,
                                                     department,
                                                     className,
+                                                    subject
                                                    
                                                 }
                                             })}
